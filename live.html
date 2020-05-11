@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Report Now</title>
+
+		<!--favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+		<!--Icons css-->
+		<link rel="stylesheet" href="assets/css/icons.css">
+
+		<!--mCustomScrollbar css-->
+		<link rel="stylesheet" href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css">
+
+		<!--Style css-->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="assets/plugins/toggle-menu/sidemenu.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+
+	</head>
+
+	<body class="app ">
+
+		<div id="spinner"></div>
+
+		<div id="app">
+			<div class="main-wrapper" >
+				<div class="row">
+					<div class="col-sm-1 column1 darkest">
+						<ul>
+							<li><i class="fa fa-user"></i></li>
+							<li><i class="fa fa-users"></i></li>
+							<li><i class="fa fa-eye"></i></li>
+							<li><i class="fa fa-circle"></i></li>
+							<li><i class="fa fa-check"></i></li>
+							<li><i class="fa fa-map"></i></li>
+						</ul>
+					</div>
+					
+					<div class="col-sm-2 column2 dark">
+						<div class="row topbar">
+							<select class="">
+								<option>All Reports</option>
+							</select>
+							
+							<span class="notify"><i class="fa fa-bell"></i></span>
+						</div>
+						
+						<div class="row bodypart">
+							<ul class="publisher_list_container">
+								<!--<li> <button> 0702342342- Ikoyi  <i class="fa fa-envelope"></i> </button> </li>
+								<li> <button> 0702342342- Ikoyi  <i class="fa fa-envelope"></i> </button> </li>
+								<li> <button> 0702342342- Ikoyi  <i class="fa fa-envelope"></i> </button> </li> -->
+							
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-sm-9 column3"> 
+						<div class="top-bar"><i class="fa fa-circle"></i> Live Report</div>
+						
+						<div class="row bodypart">
+								<div class="col-sm-12 bar"><i class="fa fa-circle-o"></i> Fire Service</div>
+							
+								
+								<div class="col-sm-3">
+									<div class=" caller_info">
+										<p>Name : </p>
+										<p>Phone Number : </p>
+										<p>Address : </p>
+										<p>Longitude : </p>
+										<p>Latitude :</p>
+									
+									</div>
+									
+									<div class="" id="map">
+										
+									</div>
+								</div>
+								
+								
+								<div class="col-sm-6">
+									<div style="min-width:100%; min-height:300px;">
+										<div id="videos">
+											<div id="subscriber"></div>
+											<div id="publisher"></div>
+										</div>
+									</div>
+									
+									<div class="box">
+										<div class="escalate">
+											<ul>
+												<li>Esaclate Report </li>
+												<li>Fire Service </li>
+												<li>Ambulance </li>
+												<li>Police </li>
+												<li>Lastma </li>
+											</ul>
+										</div>
+										<div class="row">
+											<div class="col-sm-12"><textarea> </textarea></div>
+											<div class="col-sm-12"> 
+												<div class="row" style="margin: 10px 0px;">
+													<div class="col-sm-6">
+														<select><option>Dispatch</option></select>
+														
+														<input type="checkbox"/>
+														<input type="checkbox"/>
+														<input type="checkbox"/>
+														<input type="checkbox"/>
+													</div>
+													<div class="col-sm-6">
+														Send with attachment <input type="checkbox"/>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-sm-12">
+												<div class="row">
+													<div class="col-sm-6"><button class="btn btn-default">Dismiss Report</button></div>
+													<div class="col-sm-6"><button class="btn btn-primary">Send</button></div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="col-sm-3">
+									<div class="col-sm-12 bar mt-4"><i class="fa fa-warning"></i> 09023423234  Ikoyi <i class="fa fa-video-camera"></i> </div>
+									
+										<div class="card mt-4">
+											<div class="card-header">
+												<h4>Chats</h4>
+											</div>
+											<div class="chat_message_container">
+												
+											</div>
+											
+											<div class="card-footer">
+													<div contenteditable="true" style="height:50px" id="message_text"> </div>
+													<div class="mt-3">
+														<button class="btn btn-primary btn-block" id="send_message" disabled>Send</button>
+													</div>
+											</div>
+											
+										</div>
+										
+										<div class="col-sm-12"><button class="btn btn-block btn-primary">End Report Session</button> </div>
+										
+								</div>
+							
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<style>
+				div#publisher {
+					display: none;
+				}
+		</style>
+		<!--Jquery.min js-->
+		<script src="assets/js/jquery.min.js"></script>
+
+		<!--popper js-->
+		<script src="assets/js/popper.js"></script>
+
+		<!--Tooltip js-->
+		<script src="assets/js/tooltip.js"></script>
+
+		<!--Bootstrap.min js-->
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+		<!--Jquery.nicescroll.min js-->
+		<script src="assets/plugins/nicescroll/jquery.nicescroll.min.js"></script>
+
+		<!--mCustomScrollbar js-->
+		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<!--Scroll-up-bar.min js-->
+		<script src="assets/plugins/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
+
+		<!--Sidemenu js-->
+		<script src="assets/plugins/toggle-menu/sidemenu.js"></script>
+
+		<!--Scripts js-->
+		<script src="assets/js/scripts.js"></script>
+		
+		
+		<script src="https://static.opentok.com/v2/js/opentok.js"></script>
+		<!-- <script type="text/javascript" src="js/app.js"></script> -->
+		 <script type="text/javascript" src="myscript.js"></script>
+		 
+		 <script>
+				// Initialize and add the map
+				function initMap() {
+				  // The location of Uluru
+				  var uluru = {lat: -25.344, lng: 131.036};
+				  // The map, centered at Uluru
+				  var map = new google.maps.Map(
+					  document.getElementById('map'), {zoom: 4, center: uluru});
+				  // The marker, positioned at Uluru
+				  var marker = new google.maps.Marker({position: uluru, map: map});
+				}
+		</script>
+		<!--Load the API from the specified URL
+		* The async attribute allows the browser to render the page while the API loads
+		* The key parameter will contain your own API key (which is not needed for this tutorial)
+		* The callback parameter executes the initMap() function
+		-->
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArvD0YkgD-ZjHcPbdlidNCPXxsXjtYf9Q&callback=initMap">
+		</script>
+		<style>
+		  /* Set the size of the div element that contains the map */
+		  #map {
+			height: 400px;  /* The height is 400 pixels */
+			width: 100%;  /* The width is the width of the web page */
+		   }
+		</style>
+
+
+	</body>
+</html>
